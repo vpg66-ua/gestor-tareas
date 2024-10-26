@@ -1,8 +1,8 @@
 # gestor-tareas
 Esta aplicación abarcará autenticación de usuarios, gestión de proyectos, asignación de tareas y almacenamiento de archivos, con funcionalidades avanzadas y basadas en servicios de Azure.
 
-#Organización del código
-En una aplicación de .NET Core o ASP.NET Core, el código va a organizarse así:
+# Organización del código
+El código va a organizarse así:
 
 ## Capas:
 
