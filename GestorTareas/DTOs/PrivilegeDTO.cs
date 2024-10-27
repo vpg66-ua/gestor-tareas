@@ -1,4 +1,4 @@
-namespace GestorTareas.Models{
+namespace GestorTareas.DTO{
     public class Privilege
     {
         public required int Id { get; set; }

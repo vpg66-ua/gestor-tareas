@@ -1,4 +1,4 @@
-namespace GestorTareas.Models{
+namespace GestorTareas.DTO{
     public class GroupPrivilege
     {
         public required int GroupId { get; set; }

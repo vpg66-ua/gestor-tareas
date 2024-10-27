@@ -1,4 +1,4 @@
-namespace GestorTareas.Models{
+namespace GestorTareas.DTO{
     public class UserGroup
     {
         public required int Id { get; set; }
