@@ -1,5 +1,5 @@
 namespace GestorTareas.DTO{
-    public class UserGroup
+    public class UserGroupDTO
     {
         public required int Id { get; set; }
         public required string GroupName { get; set; }

@@ -1,5 +1,5 @@
 namespace GestorTareas.DTO{
-    public class Privilege
+    public class PrivilegeDTO
     {
         public required int Id { get; set; }
         public required string PrivilegeName { get; set; }

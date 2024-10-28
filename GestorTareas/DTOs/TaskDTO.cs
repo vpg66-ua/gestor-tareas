@@ -1,5 +1,5 @@
 namespace GestorTareas.DTO{
-    public class Task
+    public class TaskDTO
     {
         public required int Id { get; set; }
         public required string Title { get; set; }
@@ -9,6 +9,6 @@ namespace GestorTareas.DTO{
         public bool Completed { get; set; }
         public required int UserId { get; set; }
 
-        public User User { get; set; }
+        public UserDTO User { get; set; }
     }
 }

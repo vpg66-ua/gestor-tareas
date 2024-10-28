@@ -1,12 +1,15 @@
+using Xunit;
+using Moq;
+using GestorTareas.Services;
+using GestorTareas.Repositories.Interfaces;
+
 public class UserServiceTests
 {
-    private readonly Mock<IUserRepository> _mockRepo;
-    private readonly UserService _service;
+    private readonly AuthService _service;
 
     public UserServiceTests()
     {
-        _mockRepo = new Mock<IUserRepository>();
-        _service = new UserService(_mockRepo.Object);
+        _service = new AuthService();
     }
 
     [Fact]

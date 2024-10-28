@@ -1,3 +1,6 @@
+using GestorTareas.Repositories;
+using GestorTareas.Data;
+
 public class UserRepositoryTests
 {
     private readonly UserRepository _repository;

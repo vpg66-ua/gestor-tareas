@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using GestorTareas.Services;
+using GestorTareas.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,17 @@ builder.Services.AddSwaggerGen();
 // Authentication service
 builder.Services.AddControllers();
 builder.Services.AddScoped<AuthService>();
+
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile("secrets.json")
+    .Build();
+
+var connectionString = configuration["DefaultConfiguration"];
+
+builder.Services.AddDbContext<ApplicationDbContext>(
+    dbContextOptions => dbContextOptions.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 39))));
+
+            
 
 var app = builder.Build();
 

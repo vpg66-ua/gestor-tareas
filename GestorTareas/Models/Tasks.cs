@@ -1,5 +1,5 @@
 namespace GestorTareas.Models{
-    public class Task
+    public class Tasks
     {
         public required int Id { get; set; }
         public required string Title { get; set; }

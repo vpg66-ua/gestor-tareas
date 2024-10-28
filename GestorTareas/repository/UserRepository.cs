@@ -1,5 +1,12 @@
-public class UsuarioRepository : GenericRepository<Usuario>, IUsuarioRepository
+using GestorTareas.Models;
+using GestorTareas.Repositories.Interfaces;
+using GestorTareas.Data;
+
+namespace GestorTareas.Repositories
 {
-    public UsuarioRepository(AplicationDbContext context) : base(context)
-    { }
+    public class UserRepository : GenericRepository<User>, IUserRepository
+    {
+        public UserRepository(ApplicationDbContext context) : base(context)
+        { }
+    }
 }

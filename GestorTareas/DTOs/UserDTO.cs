@@ -1,5 +1,5 @@
 namespace GestorTareas.DTO{
-    public class User
+    public class UserDTO
     {
         public required int Id { get; set; }
         public required string Username { get; set; }
@@ -8,6 +8,6 @@ namespace GestorTareas.DTO{
         public required int GroupId { get; set; }
         public DateTime CreateTime { get; set; }
 
-        public UserGroup UserGroup { get; set; }
+        public UserGroupDTO UserGroup { get; set; }
     }
 }
