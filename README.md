@@ -20,17 +20,5 @@ El código va a organizarse así:
 - DTOs (Data Transfer Objects): Objetos que encapsulan datos específicos para la API.
 - Configuración en appsettings.json: Almacena configuraciones como las conexiones a Azure y otros servicios de la nube.
 
-## Funcionalidades interesantes usando Azure
-Para el proyecto de gestión de tareas y usuarios, se quieren aprovechar los siguientes servicios de Azure:
-
-- Azure Active Directory B2C: Para gestionar autenticación y autorización, permitiendo que los usuarios se registren, inicien sesión y gestionen sus credenciales.
-
-- Azure Cosmos DB o Azure SQL Database: Para almacenar y gestionar datos de usuarios, proyectos y tareas.
-
-- Azure Blob Storage: Para almacenar archivos adjuntos, como documentos o imágenes asociados con proyectos o tareas.
-
-- Azure Functions: Para tareas específicas o eventos desencadenados, como el envío de notificaciones automáticas.
-
-- Azure Logic Apps: Para construir flujos de trabajo automatizados, como notificaciones de tareas o integraciones con otros servicios.
-
-- Azure Monitor y Application Insights: Para el monitoreo de la aplicación en producción, con vistas sobre el rendimiento, las consultas y la actividad del usuario.
+## Base de datos
+- Para la persistencia se utiliza una base de datos mysql en localhost.
