@@ -28,6 +28,10 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
 
+      # Move to the test project
+      - name: Move to test project
+        run: cd GestorTareas.Tests
+        
       # Ejecuta los tests
       - name: Run tests
         run: dotnet test --no-build --verbosity normal
