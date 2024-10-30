@@ -1,0 +1,37 @@
+name: CI for .NET Project
+
+on:
+  pull_request:
+    branches:
+      - '**'  # Esto ejecuta la acción en cualquier rama
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Configura el checkout del código en la VM de Actions
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      # Configura el SDK de .NET
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'  # Cambia esto por la versión que uses
+
+      # Restaura las dependencias del proyecto
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Construye el proyecto
+      - name: Build
+        run: dotnet build --no-restore
+
+      # Move to the test project
+      - name: Move to test project
+        run: cd GestorTareas.Tests
+        
+      # Ejecuta los tests
+      - name: Run tests
+        run: dotnet test --no-build --verbosity normal
