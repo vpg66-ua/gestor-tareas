@@ -7,12 +7,12 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       # Configura el checkout del código en la VM de Actions
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
 
       # Configura el SDK de .NET
       - name: Setup .NET SDK

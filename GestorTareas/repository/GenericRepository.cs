@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using GestorTareas.Repositories.Interfaces;
 using GestorTareas.Data;
+using System.Threading.Tasks;
 
 namespace GestorTareas.Repositories
 {

@@ -11,6 +11,6 @@ namespace GestorTareas.Data
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<UserTask> UserTask { get; set; }
     }
 }
